@@ -31,13 +31,13 @@ export function Todo() {
           </Button>
         </div>
         {tasks.map((tsk, index) => (
-          <ColorBox key={index} task={tsk} tasks={tasks} setTasks={setTasks} />
+          <Todolist key={index} task={tsk} tasks={tasks} setTasks={setTasks} />
         ))}
       </div>
     </div>
   );
 }
-function ColorBox({ task, tasks, setTasks }) {
+function Todolist({ task, tasks, setTasks }) {
   const removeitem = (id) => {
     setTasks(tasks.filter((item) => item.id !== id));
   };
